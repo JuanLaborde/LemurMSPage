@@ -1,0 +1,87 @@
+@font-face {
+    font-family: "Neon V2";
+    src: url("https://db.onlinewebfonts.com/t/1621a4e7a1b7ab08a993f1be8f2e6dad.woff2")format("woff2");
+    font-display: block;
+  }
+
+.flash {
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #A738D6;
+    font-family: "Neon V2", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 24px;
+    overflow: hidden;
+    transition: 0.2s;
+    margin-top: 80px;
+}
+
+.flash:hover {
+    color: #A738D6;
+    background-color: #cc7fed;
+    box-shadow: 0 0 10px #cc7fed, 0 0 40px #cc7fed, 0 0 80px #cc7fed ;
+    transition-delay: 1s;
+}
+
+.flash span {
+    position: absolute;
+    display: block;
+}
+
+.flash span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #cc7fed);
+}
+
+.flash:hover span:nth-child(1) {
+    left: 100%;
+    transition: 1s;
+}
+
+.flash span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #cc7fed);
+}
+
+.flash:hover span:nth-child(3) {
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+
+.flash span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #cc7fed);
+}
+
+.flash:hover span:nth-child(2) {
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+
+.flash span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #cc7fed);
+}
+
+.flash:hover span:nth-child(4) {
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+}
