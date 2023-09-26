@@ -38,52 +38,29 @@ div {
 h1 {
     font-family: "Kaushan Script";
     font-size: ${(props) => props.theme.fontxxxl};
+    padding: 80px 0 0 0;
 
     text-shadow: 1px 1px 1px ${(props) => props.theme.body};
     margin-right: 10px;
   }
   @media (max-width: 64em) {
   h1 {
-    font-size: calc(2rem + 4vw);
+    font-size: calc(1rem + 2vw);
   }
 }
 
 `;
 
-const container = {
-  hidden : {
-    opacity:0,
-  },
-  show : {
-    opacity: 1,
-
-    transition : {
-        delayChildren: 0.5,
-        staggerChildren: 0.3,
-    }
-  },
-
-}
-
-const item = {
-  hidden : {
-    opacity:0,
-  },
-  show : {
-    opacity: 1,
-  },
-
-}
 
 const CoverImage = () => {
   return (
     <ImageContainer>
-        <Title variants = {container} initial="hidden" animate="show">
+        <Title>
             <div>
-                <motion.h1 variants = {item} animate="show" data-scroll data-scroll-delay= "0.23" data-scroll-speed="4">We</motion.h1>
-                <motion.h1 variants = {item} data-scroll data-scroll-delay= "0.13" data-scroll-speed="4">Design</motion.h1>
-                <motion.h1 variants = {item} data-scroll data-scroll-delay= "0.9" data-scroll-speed="4">your</motion.h1>
-                <motion.h1 variants = {item} data-scroll data-scroll-delay= "0.3" data-scroll-speed="4">wish</motion.h1>
+                <motion.h1 >We</motion.h1>
+                <motion.h1>Design</motion.h1>
+                <motion.h1>your</motion.h1>
+                <motion.h1>wish</motion.h1>
             </div>
         </Title>        
     </ImageContainer>
