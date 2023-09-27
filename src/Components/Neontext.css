@@ -3,6 +3,8 @@
     src: url("https://db.onlinewebfonts.com/t/1621a4e7a1b7ab08a993f1be8f2e6dad.woff2")format("woff2");
     font-display: block;
   }
+
+  @import url('https://fonts.cdnfonts.com/css/itc-benguiat-std');
   
   :root {
   
@@ -10,7 +12,7 @@
     --light-200: #00E7FF;
     --light-300: #A738D6;
     --light-400: #bb5de4;
-    --light-500: #ee0808;
+    --light-500: #ffff94;
   }
 
   
@@ -70,40 +72,14 @@
 
   /*--------------------------------------------------------------------------------------------*/
 
-  /* ABOUT TITLE */
+  /* SERVICES TITLE */
 
-  .neon-about {
-    font-size: clamp(5rem, 5vmin, 10rem);
-    color: #A738D6;
+  .neon-services {
+    color: #ff9d00;
     text-transform: uppercase;
     text-align: center;
-    font-family: "Neon V2", sans-serif;
-    margin-bottom: 5px;
-  }
-
-  .neon-about::after {
-    position: absolute;
-    left: 0;
-    content: attr(data-content);
-    color: transparent;
-    animation: flicker 1s 3s infinite linear;
-    opacity: 1;
-    z-index: -1;
-    text-shadow: 0.2vw 0.1vw 1vw transparent,
-    0.4vw 0.2vw 1.5vw var(--light-400),
-    0.5vw 0.3vw 2vw var(--light-400),
-    0.6vw 0.4vw 2.5vw var(--light-400);
-  }
-
-   /*--------------------------------------------------------------------------------------------*/
-
-   /* SERVICES TITLE */
-
-   .neon-services {
-    font-size: clamp(5rem, 5vmin, 10rem);
-    color: #00E7FF;
-    text-transform: uppercase;
-    font-family: "Neon V2", sans-serif;
+    -webkit-text-stroke: 2px #ffff94;
+    font-family: 'ITC Benguiat Std', sans-serif;
   }
 
   .neon-services::after {
@@ -115,23 +91,24 @@
     opacity: 1;
     z-index: -1;
     text-shadow: 0.2vw 0.1vw 1vw transparent,
-    0.4vw 0.2vw 1.5vw var(--light-200),
-    0.5vw 0.3vw 2vw var(--light-200),
-    0.6vw 0.4vw 2.5vw var(--light-200);
+    0.4vw 0.2vw 1.5vw var(--light-500),
+    0.5vw 0.3vw 2vw var(--light-100),
+    0.6vw 0.4vw 2.5vw var(--light-100);
   }
 
-    /*--------------------------------------------------------------------------------------------*/
+   /*--------------------------------------------------------------------------------------------*/
 
-    /* TESTIMONIALS TITLE */
+   /* SLOGAN TITLE */
 
-   .neon-testimonials {
-    font-size: clamp(5rem, 5vmin, 10rem);
-    color: #ee0808;
+   .neon-slogan {
+    color: #ff9d00;
     text-transform: uppercase;
-    font-family: "Neon V2", sans-serif;
+    text-align: center;
+    -webkit-text-stroke: 2px #ffff94;
+    font-family: 'ITC Benguiat Std', sans-serif;
   }
 
-  .neon-testimonials::after {
+  .neon-slogan::after {
     position: absolute;
     left: 0;
     content: attr(data-content);
@@ -139,10 +116,10 @@
     animation: flicker 1s 3s infinite linear;
     opacity: 1;
     z-index: -1;
-    text-shadow: 0.2vw 0.1vw 1vw transparent,
-    0.4vw 0.2vw 1.5vw var(--light-500),
-    0.5vw 0.3vw 2vw var(--light-500),
-    0.6vw 0.4vw 2.5vw var(--light-500);
+    text-shadow: 0.1vw 0.1vw 1vw transparent,
+    0.2vw 0.2vw 1.5vw var(--light-500),
+    0.3vw 0.3vw 2vw var(--light-100),
+    0.4vw 0.4vw 2.5vw var(--light-100);
   }
 
     /*--------------------------------------------------------------------------------------------*/

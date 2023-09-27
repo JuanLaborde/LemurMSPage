@@ -1,18 +1,16 @@
 import { createGlobalStyle } from "styled-components";
 import "@fontsource/kaushan-script";
-import "@fontsource/sirin-stencil";
-
 
 
 const GlobalStyles = createGlobalStyle`
-
+@import url('https://fonts.cdnfonts.com/css/itc-benguiat-std');
 *,*::before,*::after{
     margin: 0;
     padding: 0; 
 }
 
 body {
-    font-family: "Sirin Stencil";
+    font-family: 'ITC Benguiat Std', sans-serif;
     overflow-x: hidden; 
 }
 

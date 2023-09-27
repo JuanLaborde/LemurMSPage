@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import MainGif from '../assets/lemur-animado.gif';
-import { motion } from 'framer-motion';
+import NeonText from './Neontext';
 
 const ImageContainer = styled.section`
 width: 100%;
@@ -18,7 +18,7 @@ background-color: black;
     }
 `;
 
-const Title = styled(motion.div)`
+const Title = styled.div`
 position: absolute;
 top: 500px;
 bottom: 0;
@@ -36,16 +36,15 @@ div {
     flex-direction: row;
 }
 h1 {
-    font-family: "Kaushan Script";
-    font-size: ${(props) => props.theme.fontxxxl};
+    font-size: ${(props) => props.theme.fontxl};
     padding: 80px 0 0 0;
 
-    text-shadow: 1px 1px 1px ${(props) => props.theme.body};
+
     margin-right: 10px;
   }
   @media (max-width: 64em) {
   h1 {
-    font-size: calc(1rem + 2vw);
+    font-size: calc(2rem + 2vw);
   }
 }
 
@@ -57,10 +56,7 @@ const CoverImage = () => {
     <ImageContainer>
         <Title>
             <div>
-                <motion.h1 >We</motion.h1>
-                <motion.h1>Design</motion.h1>
-                <motion.h1>your</motion.h1>
-                <motion.h1>wish</motion.h1>
+                <h1><NeonText type="neon-slogan neon-wrapper" text="We Design your wish" data="We Design your wish" /></h1>
             </div>
         </Title>        
     </ImageContainer>

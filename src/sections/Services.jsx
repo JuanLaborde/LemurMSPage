@@ -9,7 +9,7 @@ import img2 from "../assets/Images/Modernization.png";
 import img3 from "../assets/Images/Development.png";
 import img4 from "../assets/Images/App.jpg";
 import NeonButton from '../Components/NeonButton';
-// import NeonText from "../components/Neontext";
+import NeonText from "../Components/Neontext";
 import ladrillos from '../assets/Images/ladrillos.jpg'
 
 
@@ -31,11 +31,6 @@ const Section = styled(motion.section)`
 
 const Title = styled.h1`
   font-size: ${(props) => props.theme.fontxxxl};
-  font-family: "Kaushan Script";
-  font-weight: 300;
-  /* text-transform: capitalize; */
-  color: ${(props) => props.theme.text};
-  text-shadow: 1px 1px 1px ${(props) => props.theme.body};
 
   position: absolute;
   top: 1rem;
@@ -192,8 +187,7 @@ const Services = () => {
   return (
     <Section ref={ref} id="shop">
       <Title data-scroll data-scroll-speed="-1">
-        {/* <NeonText type="neon-about" text="Our Services" data="Our Services" /> */}
-        Our Services
+        <NeonText type="neon-services" text="Our Services" data="Our Services" />
       </Title>
       <Left>
         <p data-scroll data-scroll-speed="-2" data-scroll-direction="horizontal">
