@@ -140,7 +140,7 @@ const About = () => {
   return (
     <Section id="fixed-target" className='About'>
       <Title data-scroll data-scroll-speed="-2" data-scroll-direction="horizontal">
-        <NeonText type="neon-titles" text="About us" data="About us" />
+        <NeonText type="neon-titles neon-wrapper" text="About us" data="About us" />
       </Title>
       <Left data-scroll data-scroll-sticky data-scroll-target="#fixed-target">
         We're fashion studio based in california.

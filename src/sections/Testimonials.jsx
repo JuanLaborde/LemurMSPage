@@ -210,7 +210,7 @@ const Testimonials = () => {
       <Title
         data-scroll data-scroll-speed="-2" data-scroll-direction="horizontal"
       >
-        <NeonText type="neon-titles" text="testimonials" data="testimonials"/>
+        <NeonText type="neon-titles neon-wrapper" text="testimonials" data="testimonials"/>
       </Title>
 
       <Container ref={ScrollingRef}>

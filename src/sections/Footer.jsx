@@ -130,20 +130,20 @@ const Footer = () => {
       >
         <ul>
           <li aria-hidden="true" onClick={() => handleScroll(".Home")}>
-          <NeonText type="neon-text" text="home" data="home" />
+          <NeonText type="neon-text neon-wrapper" text="home" data="home" />
           </li>
           <li aria-hidden="true" onClick={() => handleScroll(".About")}>
-          <NeonText type="neon-text" text="about" data="about" />
+          <NeonText type="neon-text neon-wrapper" text="about" data="about" />
           </li>
           <li aria-hidden="true" onClick={() => handleScroll(".Services")}>
-          <NeonText type="neon-text" text="services" data="services" />
+          <NeonText type="neon-text neon-wrapper" text="services" data="services" />
           </li>
           <li aria-hidden="true" onClick={() => handleScroll(".Testimonial")}>
-          <NeonText type="neon-text" text="testimonials" data="testimonials" />
+          <NeonText type="neon-text neon-wrapper" text="testimonials" data="testimonials" />
           </li>
           <li>
             <a href="/portfolio" target={"_blank"} rel="noreferrer">
-            <NeonText type="neon-text" text="contact" data="contact" />
+            <NeonText type="neon-text neon-wrapper" text="contact" data="contact" />
             </a>
           </li>
           <li>

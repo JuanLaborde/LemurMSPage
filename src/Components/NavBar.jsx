@@ -110,10 +110,10 @@ const NavBar = () => {
                 dragSnapToOrigin
             >
                 <MenuBtn onClick={() => setClick(!click)}>Menu</MenuBtn>
-                <MenuItem whileHover={{ scale: 1.1, y: -5 }} whileTap={{ scale: 0.9, y: 0 }} aria-hidden="true" onClick={() => handleScroll(".Home")}><NeonText type="neon-text" text="home" data="home" /></MenuItem>
-                <MenuItem whileHover={{ scale: 1.1, y: -5 }} whileTap={{ scale: 0.9, y: 0 }} aria-hidden="true" onClick={() => handleScroll(".About")}><NeonText type="neon-text" text="about us" data="about us" /></MenuItem>
-                <MenuItem whileHover={{ scale: 1.1, y: -5 }} whileTap={{ scale: 0.9, y: 0 }} aria-hidden="true" onClick={() => handleScroll(".Services")}><NeonText type="neon-text" text="services" data="services" /></MenuItem>
-                <MenuItem whileHover={{ scale: 1.1, y: -5 }} whileTap={{ scale: 0.9, y: 0 }} aria-hidden="true" onClick={() => handleScroll(".Testimonial")}><NeonText type="neon-text" text="testimonials" data="testimonials" /></MenuItem>
+                <MenuItem whileHover={{ scale: 1.1, y: -5 }} whileTap={{ scale: 0.9, y: 0 }} aria-hidden="true" onClick={() => handleScroll(".Home")}><NeonText type="neon-text neon-wrapper" text="home" data="home" /></MenuItem>
+                <MenuItem whileHover={{ scale: 1.1, y: -5 }} whileTap={{ scale: 0.9, y: 0 }} aria-hidden="true" onClick={() => handleScroll(".About")}><NeonText type="neon-text neon-wrapper" text="about us" data="about us" /></MenuItem>
+                <MenuItem whileHover={{ scale: 1.1, y: -5 }} whileTap={{ scale: 0.9, y: 0 }} aria-hidden="true" onClick={() => handleScroll(".Services")}><NeonText type="neon-text neon-wrapper" text="services" data="services" /></MenuItem>
+                <MenuItem whileHover={{ scale: 1.1, y: -5 }} whileTap={{ scale: 0.9, y: 0 }} aria-hidden="true" onClick={() => handleScroll(".Testimonial")}><NeonText type="neon-text neon-wrapper" text="testimonials" data="testimonials" /></MenuItem>
             </MenuItems>
         </NavContainer>
     )

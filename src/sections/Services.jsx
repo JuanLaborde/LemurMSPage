@@ -29,6 +29,27 @@ const Section = styled(motion.section)`
  background-color: black;
 `;
 
+const Container = styled.div`
+margin-left: 45%;
+margin-top: 20%;
+width: 50%;
+z-index: -1;
+text-align: center;
+align-items: center;
+display: flex;
+flex-direction: column;
+
+p{
+  color: white;
+}
+
+div {
+  display: flex;
+  flex-direction: row;
+
+}
+`
+
 const Title = styled.h1`
   font-size: ${(props) => props.theme.fontfs};
 
@@ -186,11 +207,20 @@ const Services = () => {
 
   return (
     <Section ref={ref} id="shop" className="Services">
+      <Container>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed veritatis consequatur odio inventore sunt, perspiciatis repudiandae eaque expedita! Consectetur cum debitis iste aperiam temporibus illo dolor laboriosam, ratione amet sunt. 
+        </p>
+        <div>
+          <NeonButton type="flash" text="Contact" />
+          <NeonButton type="flash" text="Portfolio" />
+        </div>
+      </Container>
       <Title data-scroll data-scroll-speed="-1">
-        <NeonText type="neon-titles" text="Our Services" data="Our Services" />
+        <NeonText type="neon-titles neon-wrapper" text="Our Services" data="Our Services" />
       </Title>
       <Left>
-        <p data-scroll data-scroll-speed="-2"  data-scroll-direction="vertical">
+        <p data-scroll data-scroll-speed="-2" data-scroll-direction="vertical">
           The brand new collection is currently being developed in USA. We
           create our products using best quality material, including the use of
           some of the pure fabrics to make our products. All products are made
@@ -202,7 +232,6 @@ const Services = () => {
           well. It is great for us to carry our new clothes all around the
           country and look different.
           <br /> <br />
-          <NeonButton data-scroll data-scroll-speed="-2" type="flash" text="Our Portfolio" />
         </p>
       </Left>
       <Right data-scroll ref={Horizontalref}>

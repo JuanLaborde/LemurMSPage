@@ -36,6 +36,7 @@
     text-transform: uppercase;
     text-align: center;
     font-family: "Neon V2", sans-serif;
+    cursor: pointer;
   }
 
   .neon-text:hover {
@@ -158,7 +159,7 @@
    /* SLOGAN TITLE */
 
    .neon-slogan {
-    color: #ff9d00;
+    color: transparent;
     text-transform: uppercase;
     text-align: center;
     -webkit-text-stroke: 2px #ffff94;
@@ -173,7 +174,7 @@
     opacity: 1;
     z-index: -1;
     text-shadow: 0.1vw 0.1vw 1vw transparent,
-    0.2vw 0.2vw 1.5vw var(--light-500),
+    0.2vw 0.2vw 1.5vw var(--light-100),
     0.3vw 0.3vw 2vw var(--light-100),
     0.4vw 0.4vw 2.5vw var(--light-100);
   }

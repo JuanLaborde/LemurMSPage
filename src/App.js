@@ -16,6 +16,7 @@ import Services from "./sections/Services";
 import GlobalStyles from "./styles/GlobalStyles";
 import { dark } from "./styles/Themes";
 
+
 function App() {
   // useLocoScroll();
   const containerRef = useRef(null);
