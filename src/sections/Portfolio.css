@@ -1,0 +1,378 @@
+@import url('https://fonts.cdnfonts.com/css/itc-benguiat-std');
+
+
+h1 {
+    color:white;
+    padding: 50px 10% 10px 40%;
+    width: 100vh;
+}
+
+.Content-Slider {
+    margin-top: 50px;
+    position: relative;
+    font-size: 100%;
+    font-weight: 400;
+    min-height: 50vh;
+}
+
+.Content-Slider {
+    width: 60%;
+    height: auto;
+    margin-top: 5%;
+    margin-left: 6%;   
+}
+
+.flex__container {
+    position: absolute;
+    top: 110px;
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    -webkit-flex-flow: row wrap;
+    -moz-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    -o-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-justify-content: flex-start;
+    -moz-justify-content: flex-start;
+    -ms-justify-content: flex-start;
+    -o-justify-content: flex-start;
+    justify-content: flex-start;
+    height: 120%;
+    width: 140%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.flex__container.flex--active {
+    z-index: 2;
+}
+
+.text--sub {
+    font-size: 30px;
+    letter-spacing: 0.5rem;
+    margin-bottom: 0px;
+}
+
+.text--normal {
+    font-size: 30px;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 35px;
+    margin-top: 15px;
+}
+
+.flex__item {
+    height: 100vh;
+    color: #fff;
+    transition: transform 0.1s linear;
+}
+
+.flex__item--left {
+    display: inline-flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    align-items: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    width: 50%;
+    height: 400px;
+    transform-origin: left bottom;
+    transition: transform 0.1s linear 0.4s;
+    opacity: 0;
+    position: relative;
+    overflow: hidden;
+    background: black;
+}
+
+.flex__item--right {
+    display: inline-flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    align-items: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    width: 50%;
+    transform-origin: right center;
+    transition: transform 0.1s linear 0s;
+    opacity: 0;
+    background: transparent;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+}
+
+.flex__item--right img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: translate3d(0, 0, 0);
+    transition: opacity 0.43s 0.6s, transform 0.4s 0.65s cubic-bezier(0, 0.88, 0.4, 0.93);
+    object-fit: cover;
+    box-shadow: inset 40px 0 40px -16px;
+}
+
+.flex--preStart .flex__item--left,
+.flex--preStart .flex__item--right,
+.flex--active .flex__item--left,
+.flex--active .flex__item--right {
+    opacity: 1;
+}
+
+
+
+.flex__content {
+    margin-left: 80px;
+    margin-bottom: 20px;
+    width: 100%;
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    transition: transform 0.2s linear 0.2s, opacity 0.1s linear 0.2s;
+}
+
+/* Animate-START point */
+
+.flex__container.animate--start .flex__content {
+    transform: translate3d(0, -200%, 0);
+    opacity: 0;
+}
+
+.flex__container.animate--start .ImgAnimated {
+    transform: translate3d(-200px, 0, 0);
+    opacity: 0;
+}
+
+/* Animate-END point */
+
+.flex__container.animate--end .flex__item--left {
+    transform: scaleY(0);
+}
+
+.flex__container_HIS.animate--end .flex__item--right {
+    transform: scaleX(0);
+}
+
+.flex__container.animate--end .flex__content {
+    transform: translate3d(0, 200%, 0);
+    opacity: 0;
+}
+
+.flex__container.animate--end .ImgAnimated {
+    transform: translate3d(200px, 0, 0);
+    opacity: 0;
+}
+
+.slider__navi {
+    position: absolute;
+    top: 0;
+    left: 72%;
+    display: flex;
+    transform: translateX(-50%);
+}
+
+.slider__navi figure {
+    height: 75px;
+    width: 150px;
+    margin: 0 3px;
+    cursor: pointer;
+    transition: border 0.4s ease-in-out, bottom 0.4s ease-in-out, filter 0.4s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    backface-visibility: hidden;
+    bottom: -1.24rem;
+}
+
+
+.btn-image1 {
+    background-image: url("https://res.cloudinary.com/dqhtvtptp/image/upload/v1675551658/Final%20Fantasy/shinra_company_xii4qq.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: grayscale(100%);
+}
+
+.btn-image1:hover {
+    filter: grayscale(50%);
+}
+
+.btn-image1.active {
+    filter: grayscale(0%);
+    bottom: 0;
+    border-bottom: 2px solid #ff9d00;
+}
+
+.btn-image2 {
+    background-image: url("https://gameranx.com/wp-content/uploads/2023/01/FlT6fahWYAIIinI-1024x576.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: grayscale(100%);
+    height: 50px;
+}
+
+.btn-image2:hover {
+    filter: grayscale(50%);
+}
+
+.btn-image2.active {
+    filter: grayscale(0%);
+    bottom: 0;
+    height: 75px;
+    border-bottom: 2px solid #ff9d00;
+}
+
+.btn-image3 {
+    background-image: url("https://res.cloudinary.com/dqhtvtptp/image/upload/v1675553128/Final%20Fantasy/Shinra_MP_cauc1x.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: grayscale(100%);
+    height: 50px;
+}
+
+.btn-image3AC:hover {
+    filter: grayscale(50%);
+}
+
+.btn-image3.active {
+    filter: grayscale(0%);
+    bottom: 0;
+    height: 75px;
+    border-bottom: 2px solid #ff9d00;
+}
+
+.btn-image4 {
+    background-image: url("https://res.cloudinary.com/dqhtvtptp/image/upload/v1675553294/Final%20Fantasy/Midgar-construction_frjiwf.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: grayscale(100%);
+    height: 50px;
+}
+
+.btn-image4:hover {
+    filter: grayscale(50%);
+}
+
+.btn-image4.active {
+    filter: grayscale(0%);
+    bottom: 0;
+    height: 75px;
+    border-bottom: 2px solid #ff9d00;
+}
+
+.btn-image5 {
+    background-image: url("https://res.cloudinary.com/dqhtvtptp/image/upload/v1675553654/Final%20Fantasy/Sister_Ray-Crisis_Core_mpumly.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: grayscale(100%);
+    height: 50px;
+}
+
+.btn-image5:hover {
+    filter: grayscale(50%);
+}
+
+.btn-image5.active {
+    filter: grayscale(0%);
+    bottom: 0;
+    height: 75px;
+    border-bottom: 2px solid #ff9d00;
+}
+
+.btn-image6 {
+    background-image: url("https://live.staticflickr.com/65535/49811645401_f818a8a1ba_b.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: grayscale(100%);
+    height: 50px;
+}
+
+.btn-image6:hover {
+    filter: grayscale(50%);
+}
+
+.btn-image6.active {
+    filter: grayscale(0%);
+    bottom: 0;
+    height: 75px;
+    border-bottom: 2px solid #ff9d00;
+}
+
+.btn-image7 {
+    background-image: url("https://www.gamespot.com/a/uploads/ignore_jpg_scale_super/1581/15811374/36652927%20city%20ancients.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: grayscale(100%);
+    height: 50px;
+}
+
+.btn-image7:hover {
+    filter: grayscale(50%);
+}
+
+.btn-image7.active {
+    filter: grayscale(0%);
+    bottom: 0;
+    height: 75px;
+    border-bottom: 2px solid #ff9d00;
+}
+
+.btn-image8 {
+    background-image: url("https://res.cloudinary.com/dqhtvtptp/image/upload/v1675554308/Final%20Fantasy/Cetra_fuxfq7.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: grayscale(100%);
+    height: 50px;
+}
+
+.btn-image8:hover {
+    filter: grayscale(50%);
+}
+
+.btn-image8.active {
+    filter: grayscale(0%);
+    bottom: 0;
+    height: 75px;
+    border-bottom: 2px solid #ff9d00;
+}
+
+.btn-image9 {
+    background-image: url("https://res.cloudinary.com/dqhtvtptp/image/upload/v1675554861/Final%20Fantasy/Northern-Crater_qgkdwk.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: grayscale(100%);
+    height: 50px;
+}
+
+.btn-image9:hover {
+    filter: grayscale(50%);
+}
+
+.btn-image9.active {
+    filter: grayscale(0%);
+    bottom: 0;
+    height: 75px;
+    border-bottom: 2px solid #ff9d00;
+}
+
+.faded {
+    position: relative;
+    display: inline-block;
+    color: black;
+}
+
+.faded:after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-collapse: separate;
+}
+
+.faded.faded-left:after {
+    box-shadow: inset 100px 0 100px -16px;
+}

@@ -15,7 +15,7 @@ const Section = styled.section`
 
 function Home() {
   return (
-    <Section id='Home'>
+    <Section id='Home' className='Home'>
       <Suspense fallback={<></>}>
         <Logo />
         <NavBar />

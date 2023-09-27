@@ -44,7 +44,7 @@ h1 {
   }
   @media (max-width: 64em) {
   h1 {
-    font-size: calc(2rem + 2vw);
+    font-size: calc(1rem + 2vw);
   }
 }
 

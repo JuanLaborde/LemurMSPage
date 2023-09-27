@@ -30,7 +30,7 @@ const Section = styled(motion.section)`
 `;
 
 const Title = styled.h1`
-  font-size: ${(props) => props.theme.fontxxxl};
+  font-size: ${(props) => props.theme.fontfs};
 
   position: absolute;
   top: 1rem;
@@ -185,12 +185,12 @@ const Services = () => {
   }, []);
 
   return (
-    <Section ref={ref} id="shop">
+    <Section ref={ref} id="shop" className="Services">
       <Title data-scroll data-scroll-speed="-1">
-        <NeonText type="neon-services" text="Our Services" data="Our Services" />
+        <NeonText type="neon-titles" text="Our Services" data="Our Services" />
       </Title>
       <Left>
-        <p data-scroll data-scroll-speed="-2" data-scroll-direction="horizontal">
+        <p data-scroll data-scroll-speed="-2"  data-scroll-direction="vertical">
           The brand new collection is currently being developed in USA. We
           create our products using best quality material, including the use of
           some of the pure fabrics to make our products. All products are made

@@ -129,25 +129,25 @@ const Footer = () => {
         }}
       >
         <ul>
-          <li aria-hidden="true" onClick={() => handleScroll("#home")}>
+          <li aria-hidden="true" onClick={() => handleScroll(".Home")}>
           <NeonText type="neon-text" text="home" data="home" />
           </li>
-          <li aria-hidden="true" onClick={() => handleScroll("#about")}>
+          <li aria-hidden="true" onClick={() => handleScroll(".About")}>
           <NeonText type="neon-text" text="about" data="about" />
           </li>
-          <li aria-hidden="true" onClick={() => handleScroll("#shop")}>
+          <li aria-hidden="true" onClick={() => handleScroll(".Services")}>
           <NeonText type="neon-text" text="services" data="services" />
           </li>
-          <li aria-hidden="true" onClick={() => handleScroll(".new-arrival")}>
+          <li aria-hidden="true" onClick={() => handleScroll(".Testimonial")}>
           <NeonText type="neon-text" text="testimonials" data="testimonials" />
           </li>
           <li>
-            <a href="https://google.com" target={"_blank"} rel="noreferrer">
+            <a href="/portfolio" target={"_blank"} rel="noreferrer">
             <NeonText type="neon-text" text="contact" data="contact" />
             </a>
           </li>
           <li>
-            <a href="https://google.com" target={"_blank"} rel="noreferrer">
+            <a href="/portfolio" target={"_blank"} rel="noreferrer">
             <NeonText type="neon-text" text="portfolio" data="portfolio" />
             </a>
           </li>

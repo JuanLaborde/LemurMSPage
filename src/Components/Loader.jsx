@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import React from 'react';
 import styled from 'styled-components';
+import NeonText from './Neontext';
 
 const Container = styled(motion.div)`
   position: absolute;
@@ -39,7 +40,7 @@ overflow: hidden;
     stroke-linecap: round;
     g {
       path {
-        stroke: #fff;
+        stroke: #ff9d00 ;
       }
     }
   }
@@ -114,7 +115,7 @@ const Loader = () => {
         </g>
       </svg>
       <Text variants={textVariants} initial="hidden" animate="visible">
-        Lemur Media Studio
+       <NeonText type="neon-slogan neon-wrapper" text="Lemur Media Studio" data="Lemur Media Studio" />
       </Text>
     </Container>
   );

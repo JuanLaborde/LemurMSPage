@@ -3,14 +3,15 @@ import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import React, { useLayoutEffect, useRef } from 'react';
 import styled from 'styled-components';
-
+import ladrillos from '../assets/Images/ladrillos.jpg'
 import img1 from '../assets/Images/Testimonial.png';
+import NeonText from '../Components/Neontext';
 
 const Section = styled.section`
   min-height: 100vh;
   width: 100%;
   margin: 0 auto;
-
+  background-image: url(${ladrillos});
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,7 +26,8 @@ const Overlay = styled.div`
   transform: translate(-50%, -50%);
   width: 30vw;
   height: 90vh;
-  box-shadow: 0 0 0 5vw ${(props) => props.theme.text};
+  box-shadow: 0 0 0 5vw #7604a7, 0 0 5vw #fff, 0 0 6vw #A738D6, 0 0 7vw #A738D6,
+    0 0 8vw #fff, 0 0 10vw #A738D6;;
   border: 3px solid black;
 
   z-index: 11;
@@ -84,7 +86,7 @@ const Container = styled.div`
 `;
 
 const Title = styled(motion.h1)`
-  font-size: ${(props) => props.theme.fontxxxl};
+  font-size: ${(props) => props.theme.fontfs};
   font-family: 'Kaushan Script';
   font-weight: 300;
   color: ${(props) => props.theme.body};
@@ -112,9 +114,9 @@ const Text = styled.div`
   position: absolute;
   padding: 2rem;
   top: 0;
-  right: 0;
+  right: 20px;
   z-index: 11;
-
+  color: white;
   @media (max-width: 48em) {
     display: none;
   
@@ -202,13 +204,13 @@ const Testimonials = () => {
   }, []);
 
   return (
-    <Section ref={ref} id="fixed-target" className="new-arrival">
+    <Section ref={ref} id="fixed-target" className="Testimonial">
       <Overlay />
 
       <Title
         data-scroll data-scroll-speed="-2" data-scroll-direction="horizontal"
       >
-        Testimonials
+        <NeonText type="neon-titles" text="testimonials" data="testimonials"/>
       </Title>
 
       <Container ref={ScrollingRef}>

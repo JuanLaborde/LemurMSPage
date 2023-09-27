@@ -57,8 +57,8 @@ function App() {
               <AnimatePresence>
                 {Loaded ? null : <Loader />}
 
-                <Home key="home" />
-                <About key="about" />
+                <Home key="#home" />
+                <About key="#about" />
                 <Services key="services" />
                 <Marquee key="marquee" />
                 <Testimonials key="testimonials" />

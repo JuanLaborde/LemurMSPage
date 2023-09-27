@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import { motion } from 'framer-motion';
 import NeonText from './Neontext';
 import ladrillos from '../assets/Images/ladrillos.jpg'
+import { useLocomotiveScroll } from "react-locomotive-scroll";
 
 const NavContainer = styled(motion.div)`
 width: 100vw;
@@ -40,9 +41,9 @@ padding: 0 10rem;
 `
 
 const MenuBtn = styled.li`
-background-color: ${props => `rgba(${props.theme.textRgba}, 0.7)`};
+background-color: ${props => `rgba(${props.theme.textRgba}, 0.4)`};
 list-style-type: style none;
-color:${props => props.theme.body};
+color:#ff9d00;
 width: 15rem;
 height: 2.5rem;
 clip-path: polygon(0 0, 100% 0, 80% 100%, 20% 100%);
@@ -75,33 +76,44 @@ color:${props => props.theme.text};
 
 const NavBar = () => {
     const [click, setClick] = useState(false);
+    const { scroll } = useLocomotiveScroll();
+
+    const handleScroll = (id) => {
+        let elem = document.querySelector(id);
+        // console.log(elem);
+        scroll.scrollTo(elem, {
+            offset: "-100",
+            duration: "2000",
+            easing: [0.25, 0.0, 0.35, 1.0],
+        });
+    };
     return (
         <NavContainer click={click}
-        initial={{
-            y: '-100%'
-        }}
-        animate={{
-            y:0
-        }}
-        transition={{
-            duration: 1, delay:0.5  , 
-        }}
+            initial={{
+                y: '-100%'
+            }}
+            animate={{
+                y: 0
+            }}
+            transition={{
+                duration: 1, delay: 0.5,
+            }}
         >
             <MenuItems
-            drag="y"
-            dragConstraints={{
-                top:0,
-                bottom: 70,
+                drag="y"
+                dragConstraints={{
+                    top: 0,
+                    bottom: 70,
 
-            }}
-            dragElastic={0.05}
-            dragSnapToOrigin
+                }}
+                dragElastic={0.05}
+                dragSnapToOrigin
             >
                 <MenuBtn onClick={() => setClick(!click)}>Menu</MenuBtn>
-                <MenuItem whileHover={{scale:1.1, y:-5}} whileTap={{scale:0.9, y:0}}><NeonText type="neon-text" text="home" data="home" /></MenuItem>
-                <MenuItem whileHover={{scale:1.1, y:-5}} whileTap={{scale:0.9, y:0}}><NeonText type="neon-text" text="about us" data="about us" /></MenuItem>
-                <MenuItem whileHover={{scale:1.1, y:-5}} whileTap={{scale:0.9, y:0}}><NeonText type="neon-text" text="services" data="services" /></MenuItem>
-                <MenuItem whileHover={{scale:1.1, y:-5}} whileTap={{scale:0.9, y:0}}><NeonText type="neon-text" text="testimonials" data="testimonials" /></MenuItem>
+                <MenuItem whileHover={{ scale: 1.1, y: -5 }} whileTap={{ scale: 0.9, y: 0 }} aria-hidden="true" onClick={() => handleScroll(".Home")}><NeonText type="neon-text" text="home" data="home" /></MenuItem>
+                <MenuItem whileHover={{ scale: 1.1, y: -5 }} whileTap={{ scale: 0.9, y: 0 }} aria-hidden="true" onClick={() => handleScroll(".About")}><NeonText type="neon-text" text="about us" data="about us" /></MenuItem>
+                <MenuItem whileHover={{ scale: 1.1, y: -5 }} whileTap={{ scale: 0.9, y: 0 }} aria-hidden="true" onClick={() => handleScroll(".Services")}><NeonText type="neon-text" text="services" data="services" /></MenuItem>
+                <MenuItem whileHover={{ scale: 1.1, y: -5 }} whileTap={{ scale: 0.9, y: 0 }} aria-hidden="true" onClick={() => handleScroll(".Testimonial")}><NeonText type="neon-text" text="testimonials" data="testimonials" /></MenuItem>
             </MenuItems>
         </NavContainer>
     )

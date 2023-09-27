@@ -12,6 +12,7 @@ const GlobalStyles = createGlobalStyle`
 body {
     font-family: 'ITC Benguiat Std', sans-serif;
     overflow-x: hidden; 
+    background-color: black;
 }
 
 h1, h2, h3, h4, h5, h6 {

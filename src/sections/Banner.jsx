@@ -1,27 +1,25 @@
 import React from 'react';
 import styled from 'styled-components';
+import NeonText from '../Components/Neontext';
+import ladrillos from '../assets/Images/ladrillos.jpg'
 
 const Section = styled.section`
   min-height: 100vh;
-  width: 80vw;
+  width: 100%;
   margin: 0 auto;
-
+  background-image: url(${ladrillos});
   display: flex;
   justify-content: center;
   align-items: center;
-
-  /* background-color: blue; */
   position: relative;
 
 @media (max-width: 48em){
   width: 90vw;
 } 
-
 `;
 
 const Container = styled.div`
   min-height: 100vh;
-
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -33,15 +31,12 @@ const Container = styled.div`
 `;
 
 const Banner = styled.h1`
-  font-size: ${(props) => props.theme.fontxxxl};
-  font-family: 'Kaushan Script';
-  color: ${(props) => props.theme.text};
-  /* position: absolute; */
+  font-size: ${(props) => props.theme.fontfs};  
   white-space: nowrap;
   text-transform: uppercase;
-  line-height: 1;
+  line-height: 0;
 
-  @media (max-width: 70em){
+@media (max-width: 70em){
     font-size: ${(props) => props.theme.fontxxl};
 }
 @media (max-width: 64em){
@@ -59,10 +54,8 @@ const Banner = styled.h1`
 
   span {
     display: block;
-    background-color: ${(props) => props.theme.body};
-
-    padding: 1rem 2rem;
-    
+    background-color: transparent;
+    padding: 1rem 2rem 0rem 2rem;    
   }
 `;
 
@@ -77,7 +70,7 @@ const Marquee = () => {
             data-scroll-speed="8"
             data-scroll-target="#direction"
           >
-            lemur media studio
+            <NeonText type="neon-banner neon-wrapper neon-animation neon-color1" text="lemur media studio" data="lemur media studio" />
           </span>
         </Banner>
         <Banner data-scroll data-scroll-speed="-2" data-scroll-target="#direction">
@@ -87,7 +80,7 @@ const Marquee = () => {
             data-scroll-speed="-6"
             data-scroll-target="#direction"
           >
-            Design your page
+            <NeonText type="neon-banner neon-wrapper neon-color2" text="Design your page" data="Design your page" />
           </span>
         </Banner>
         <Banner>
@@ -97,7 +90,7 @@ const Marquee = () => {
             data-scroll-speed="6"
             data-scroll-target="#direction"
           >
-            Modernize your website 
+            <NeonText type="neon-banner neon-wrapper neon-color3" text="Modernize your website" data="Modernize your website" />
           </span>
         </Banner>
         <Banner>
@@ -107,7 +100,7 @@ const Marquee = () => {
             data-scroll-speed="-4"
             data-scroll-target="#direction"
           >
-            Develop App
+            <NeonText type="neon-banner neon-wrapper neon-animation neon-color2" text="Develop App" data="Develop App" />
           </span>
         </Banner>
         <Banner data-scroll data-scroll-speed="6" data-scroll-target="#direction">
@@ -117,7 +110,7 @@ const Marquee = () => {
             data-scroll-speed="6"
             data-scroll-target="#direction"
           >
-            Develop a new page
+            <NeonText type="neon-banner neon-wrapper neon-color1" text="Develop a new page" data="Develop a new page" />
           </span>
         </Banner>
       </Container>
