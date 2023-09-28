@@ -5,7 +5,7 @@ import LogoText from '../assets/Images/logoText.png';
 
 const Container = styled.div`
   position: absolute;
-  top: 1rem;
+  top: 4rem;
   left: 1rem;
 
   width: 100%;

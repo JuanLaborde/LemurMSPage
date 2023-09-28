@@ -19,43 +19,6 @@ const Section = styled.section`
   position: relative;
 `;
 
-const Overlay = styled.div`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 30vw;
-  height: 90vh;
-  box-shadow: 0 0 0 5vw #7604a7, 0 0 5vw #fff, 0 0 6vw #A738D6, 0 0 7vw #A738D6,
-    0 0 8vw #fff, 0 0 10vw #A738D6;;
-  border: 3px solid black;
-
-  z-index: 11;
-
-  @media (max-width: 70em) {
-  width: 40vw;
-
-    height: 80vh;
-  }
-
-  @media (max-width: 64em) {
-  width: 50vw;
-  box-shadow: 0 0 0 60vw ${(props) => props.theme.text};
-
-    height: 80vh;
-  }
-  @media (max-width: 48em) {
-  width: 60vw;
-
-    height: 80vh;
-  }
-  @media (max-width: 30em) {
-  width: 80vw;
-
-    height: 60vh;
-  }
-`;
-
 const Container = styled.div`
   position: absolute;
   top: 0%;
@@ -205,7 +168,6 @@ const Testimonials = () => {
 
   return (
     <Section ref={ref} id="fixed-target" className="Testimonial">
-      <Overlay />
 
       <Title
         data-scroll data-scroll-speed="-2" data-scroll-direction="horizontal"
@@ -220,7 +182,7 @@ const Testimonials = () => {
         <Photos img={img1} name="T-shirts" />
       </Container>
 
-      <Text data-scroll data-scroll-speed="-4">
+      {/* <Text data-scroll data-scroll-speed="-4">
         There is new collection available for cool clothes in all sizes. This collection
         is a great way to find a new look for you. It offers a variety of cool apparel
         styles to fit your taste, while you can also find some cool clothes that you can
@@ -232,7 +194,7 @@ const Testimonials = () => {
         <br />
         <br />
         Give it a try and experience a new look.
-      </Text>
+      </Text> */}
     </Section>
   );
 };

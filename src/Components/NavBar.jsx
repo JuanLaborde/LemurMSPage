@@ -3,7 +3,6 @@ import { useState } from 'react'
 import styled from 'styled-components'
 import { motion } from 'framer-motion';
 import NeonText from './Neontext';
-import ladrillos from '../assets/Images/ladrillos.jpg'
 import { useLocomotiveScroll } from "react-locomotive-scroll";
 
 const NavContainer = styled(motion.div)`
@@ -25,7 +24,7 @@ transition: all 0.3s ease;
 const MenuItems = styled(motion.ul)`
 position: relative;
 height: ${props => props.theme.navHeight};
-background-image: url(${ladrillos});
+background: transparent;
 
 list-style: none;
 display: flex;

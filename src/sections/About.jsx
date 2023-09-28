@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import img1 from '../assets/Images/Lemur-1.png';
+import img1 from '../assets/lemur-animado.gif';
 import img2 from '../assets/Images/retrolemur-1.png';
 import img3 from '../assets/Images/retrolemur-2.png';
 import ladrillos from '../assets/Images/ladrillos.jpg'
