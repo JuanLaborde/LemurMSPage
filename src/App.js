@@ -1,18 +1,10 @@
 import "locomotive-scroll/dist/locomotive-scroll.css";
-
 import { AnimatePresence } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import { ThemeProvider } from "styled-components";
-
-import Loader from "./Components/Loader";
-import ScrollTriggerProxy from "./Components/ScrollTriggerProxy";
-import About from "./sections/About";
-import Footer from "./sections/Footer";
-import Home from "./sections/Home";
-import Marquee from "./sections/Banner";
-import Testimonials from "./sections/Testimonials";
-import Services from "./sections/Services";
+import {Loader, ScrollTriggerProxy} from './Components/index';
+import { About, Home, Services, Marquee, Testimonials, Footer } from './sections/index';
 import GlobalStyles from "./styles/GlobalStyles";
 import { dark } from "./styles/Themes";
 

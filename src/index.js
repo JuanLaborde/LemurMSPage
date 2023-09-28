@@ -2,14 +2,19 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 // import reportWebVitals from './reportWebVitals';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { PageNotFound, Portfolio } from './sections/index'
 
 ReactDOM.render(
-  <React.StrictMode>
+  
     <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </React.StrictMode>,
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="*" element={<PageNotFound />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+      </Routes>
+    </BrowserRouter>,
+  
   document.getElementById('root')
 );
 
