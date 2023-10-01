@@ -141,10 +141,8 @@ const Footer = () => {
           <li aria-hidden="true" onClick={() => handleScroll(".Testimonial")}>
           <NeonText type="neon-text neon-wrapper" text="testimonials" data="testimonials" />
           </li>
-          <li>
-            <a href="/portfolio" target={"_blank"} rel="noreferrer">
+          <li aria-hidden="true" onClick={() => handleScroll(".Contact")}>
             <NeonText type="neon-text neon-wrapper" text="contact" data="contact" />
-            </a>
           </li>
           <li>
             <a href="/portfolio" target={"_blank"} rel="noreferrer">

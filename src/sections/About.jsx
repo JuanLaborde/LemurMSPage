@@ -7,6 +7,7 @@ import img3 from '../assets/Images/retrolemur-2.png';
 import ladrillos from '../assets/Images/ladrillos.jpg'
 import NeonText from '../Components/Neontext';
 
+
 const Section = styled.section`
   min-height: 100vh;
   width: 80vw;

@@ -7,6 +7,7 @@ import {Loader, ScrollTriggerProxy} from './Components/index';
 import { About, Home, Services, Marquee, Testimonials, Footer } from './sections/index';
 import GlobalStyles from "./styles/GlobalStyles";
 import { dark } from "./styles/Themes";
+import Contact from "./sections/ContactForm";
 
 
 function App() {
@@ -55,6 +56,7 @@ function App() {
                 <Services key="services" />
                 <Marquee key="marquee" />
                 <Testimonials key="testimonials" />
+                <Contact key="contact" />
                 <Footer key="Footer" />
               </AnimatePresence>
             </main>

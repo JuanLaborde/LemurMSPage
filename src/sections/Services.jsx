@@ -2,15 +2,15 @@ import { motion } from "framer-motion";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import React, { useLayoutEffect, useRef } from "react";
+
 import styled from "styled-components";
 
 import img1 from "../assets/Images/lineas.png";
-import img2 from "../assets/Images/Modernization.png";
-import img3 from "../assets/Images/Development.png";
-import img4 from "../assets/Images/App.jpg";
 import NeonButton from '../Components/NeonButton';
 import NeonText from "../Components/Neontext";
 import ladrillos from '../assets/Images/ladrillos.jpg'
+import madera from '../assets/Images/madera.jpg'
+import Cards from "../Components/CardServices/Cards";
 
 
 const Section = styled(motion.section)`
@@ -106,17 +106,27 @@ const Left = styled.div`
   }
 `;
 const Right = styled.div`
-  /* width: 65%; */
+  width: 100%;
   position: absolute;
-  left: 35%;
-  padding-left: 30%;
-  background-color: ${(props) => props.theme.grey};
+  left: 30%;
+  padding-left: 20%;
+  background-image: url(${madera});
+  background-repeat: no-repeat;
+  background-size: cover;
   min-height: 100vh;
-
-  display: flex;
+  
   justify-content: flex-start;
   align-items: center;
 `;
+
+const Wrap = styled.div`
+display: flex;
+  flex-direction: row;
+  margin-top: 200px;
+`
+const CardCont = styled.div`
+margin-top: 90px;
+`
 
 const Item = styled(motion.div)`
   display: inline-block;
@@ -126,12 +136,6 @@ const Item = styled(motion.div)`
   img {
     width: 100%;
     height: auto;
-    cursor: pointer;
-  }
-
-  h1 {
-    font-weight: 500;
-    text-align: center;
     cursor: pointer;
   }
 
@@ -209,7 +213,7 @@ const Services = () => {
     <Section ref={ref} id="shop" className="Services">
       <Container>
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed veritatis consequatur odio inventore sunt, perspiciatis repudiandae eaque expedita! Consectetur cum debitis iste aperiam temporibus illo dolor laboriosam, ratione amet sunt. 
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed veritatis consequatur odio inventore sunt, perspiciatis repudiandae eaque expedita! Consectetur cum debitis iste aperiam temporibus illo dolor laboriosam, ratione amet sunt.
         </p>
         <div>
           <NeonButton type="flash" text="Contact" />
@@ -235,10 +239,12 @@ const Services = () => {
         </p>
       </Left>
       <Right data-scroll ref={Horizontalref}>
-        <Product img={img1} />
-        <Product img={img2} title="Modernization" />
-        <Product img={img3} title="Developer" />
-        <Product img={img4} title="Aplications" />
+        <Wrap>
+          <Product img={img1} />
+          <CardCont>
+            <Cards />
+          </CardCont>
+        </Wrap>
       </Right>
     </Section>
   );

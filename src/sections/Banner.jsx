@@ -12,6 +12,7 @@ const Section = styled.section`
   justify-content: center;
   align-items: center;
   position: relative;
+  overflow: hidden;
 
 @media (max-width: 48em){
   width: 90vw;
